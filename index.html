@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center; border: 2px solid black; border-radius: 8px; height: 150px; width: 400px;padding-top: 80px; float: inline-start;">
+        <label for="palindrome">Enter a string or number:</label>
+        <input type="text" id="input"><br><br>
+        <button type="button" onclick="checkpalindrome()">Check</button>
+    
+    </div>
+    <script>
+        function checkpalindrome(){
+            var input = document.getElementById("input").value;
+            var rev = input.split("").reverse().join("");
+
+            if(input==""){
+                alert("Please enter a vlue!!")
+            }
+            else if( rev === input ){
+                alert(" IT'S A PALINDROME!!")
+            }else{
+                alert("NOT A PALINDROME!!")
+            }
+
+        }
+    
+    </script>
+</body>
+</html>
